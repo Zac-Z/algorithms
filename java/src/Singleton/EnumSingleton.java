@@ -13,7 +13,11 @@ package Singleton;
  */
 public enum EnumSingleton {
     INSTANCE;
-    private Singleton instance = new Singleton();
+    private Singleton instance;
+    
+    private EnumSingleton(){
+        instance = new Singleton;
+    }
 
     public Singleton getInstance() {
         return instance;
