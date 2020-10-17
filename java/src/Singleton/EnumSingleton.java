@@ -16,7 +16,7 @@ public enum EnumSingleton {
     private Singleton instance;
     
     private EnumSingleton(){
-        instance = new Singleton;
+        instance = new Singleton();
     }
 
     public Singleton getInstance() {
