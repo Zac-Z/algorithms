@@ -9,7 +9,7 @@ package singleton;
  *   getInstance() 的性能对应用程序很关键。
  */
 public class DoubleCheckedSingleton {
-    private static DoubleCheckedSingleton instance;
+    private static volatile DoubleCheckedSingleton instance;
 
     private DoubleCheckedSingleton(){};
 
