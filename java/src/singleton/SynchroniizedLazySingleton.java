@@ -1,4 +1,4 @@
-package Singleton;
+package singleton;
 
 /**
  * 是否 Lazy 初始化：是

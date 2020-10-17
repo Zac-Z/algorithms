@@ -1,4 +1,4 @@
-package Singleton;
+package singleton;
 
 /**
  * JDK 版本：JDK1.5 起
