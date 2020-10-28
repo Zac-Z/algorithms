@@ -1,5 +1,10 @@
 package builder.classicbuilder;
 
+/**
+ * 产品角色
+ *
+ * 它是被构建的复杂对象，包含多个组成部件，具体建造者创建该产品的内部表示并定义它的装配过程
+ */
 public class Computer {
     //必填
     private String cpu;
