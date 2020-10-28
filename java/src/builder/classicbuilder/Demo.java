@@ -5,7 +5,7 @@ public class Demo {
         Director director = new Director();
         Builder builder = new DellBuilder();
 
-        Computer computer = director.build(builder);;
+        Computer computer = director.build(builder);
         System.out.println(computer.toString());
     }
 }
