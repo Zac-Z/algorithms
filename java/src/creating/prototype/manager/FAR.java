@@ -1,16 +1,6 @@
 package creating.prototype.manager;
 
-public class FAR implements OfficialDocument{
-    @Override
-    public OfficialDocument clone() {
-        OfficialDocument  far = null;
-        try {
-            far  = (OfficialDocument)super.clone();
-        } catch(CloneNotSupportedException  e) {
-            System.out.println("不支持复制！");
-        }
-        return  far;
-    }
+public class FAR extends OfficialDocument{
 
     @Override
     public void display() {

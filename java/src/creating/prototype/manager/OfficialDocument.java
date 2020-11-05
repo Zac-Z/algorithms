@@ -1,6 +1,15 @@
 package creating.prototype.manager;
 
-public interface OfficialDocument extends Cloneable{
-    public  OfficialDocument clone();
-    public  void display();
+public abstract class OfficialDocument implements Cloneable{
+
+    public OfficialDocument clone() {
+        OfficialDocument  far = null;
+        try {
+            far  = (OfficialDocument)super.clone();
+        } catch(CloneNotSupportedException  e) {
+            System.out.println("不支持复制！");
+        }
+        return  far;
+    }
+    public abstract void display();
 }

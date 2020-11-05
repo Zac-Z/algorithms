@@ -1,6 +1,5 @@
 package creating.prototype.manager;
 
-import java.util.Hashtable;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
