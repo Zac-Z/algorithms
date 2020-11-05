@@ -1,6 +1,7 @@
 package creating.prototype.deepclone;
 
 import java.io.*;
+import java.time.LocalDateTime;
 
 /**
  * 对象克隆(实现java Serializable)
@@ -8,9 +9,18 @@ import java.io.*;
 public class WeeklyLog implements Serializable {
     private String name;
 
-    private String date;
+    private Integer date;
 
     private String content;
+
+    private LocalDateTime recordTime;
+
+    public WeeklyLog(String name, Integer date, String content, LocalDateTime recordTime) {
+        this.name = name;
+        this.date = date;
+        this.content = content;
+        this.recordTime = recordTime;
+    }
 
     public String getName() {
         return (this.name);
@@ -20,11 +30,11 @@ public class WeeklyLog implements Serializable {
         this.name = name;
     }
 
-    public String getDate() {
+    public Integer getDate() {
         return (this.date);
     }
 
-    public void setDate(String date) {
+    public void setDate(Integer date) {
         this.date = date;
     }
 
@@ -34,6 +44,14 @@ public class WeeklyLog implements Serializable {
 
     public void setContent(String content) {
         this.content = content;
+    }
+
+    public LocalDateTime getRecordTime() {
+        return recordTime;
+    }
+
+    public void setRecordTime(LocalDateTime recordTime) {
+        this.recordTime = recordTime;
     }
 
     //克隆方法clone()，使用Java语言提供的克隆机制
@@ -63,18 +81,18 @@ class Demo {
     public static void main(String[] args) {
         WeeklyLog  weeklyLog, newLog ;
         //创建原型对象
-        weeklyLog  = new WeeklyLog();
-        weeklyLog.setName("李四");
+        weeklyLog  = new WeeklyLog("李四",1,"看,飞碟!!!!",LocalDateTime.now());
+
         //调用克隆方法创建克隆对象
         newLog =  weeklyLog.clone();
         if (null == newLog) {
             System.err.println("克隆失败！");
         }
 
-        //比较周报
-        System.out.println(weeklyLog == newLog);
-
-        //比较引用对象
-        System.out.println(weeklyLog.getName() == newLog.getName());
+        //比较
+        System.out.println(weeklyLog == newLog);//false
+        System.out.println(weeklyLog.getName() == newLog.getName());//false
+        System.out.println(weeklyLog.getContent() == newLog.getContent());//false
+        System.out.println(weeklyLog.getRecordTime() == newLog.getRecordTime());//false
     }
 }
