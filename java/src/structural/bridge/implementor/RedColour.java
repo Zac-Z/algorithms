@@ -1,4 +1,4 @@
-package structural.bridge;
+package structural.bridge.implementor;
 
 /**
  * 具体实现化角色

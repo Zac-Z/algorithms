@@ -1,4 +1,6 @@
-package structural.bridge;
+package structural.bridge.abstractrole;
+
+import structural.bridge.implementor.Colour;
 
 /**
  * 抽象化角色

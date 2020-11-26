@@ -1,5 +1,12 @@
 package structural.bridge;
 
+import structural.bridge.abstractrole.BigOpen;
+import structural.bridge.abstractrole.Pen;
+import structural.bridge.abstractrole.StandardPen;
+import structural.bridge.implementor.Colour;
+import structural.bridge.implementor.GreenColour;
+import structural.bridge.implementor.RedColour;
+
 /**
  * 桥梁模式
  *
