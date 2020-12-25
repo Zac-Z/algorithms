@@ -1,4 +1,4 @@
-package structural.adapter;
+package structural.adapter.unidirectional;
 
 /**
  * 类适配器: 基于继承

@@ -1,4 +1,4 @@
-package structural.adapter;
+package structural.adapter.unidirectional;
 
 public interface ITarget {
     void f1();
